@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .  # Usa el Dockerfile en este mismo directorio
+    volumes:
+      - .:/app  # Montar el código fuente de tu app dentro del contenedor
+    deploy:
+      resources:
+        limits:
+          memory: 512M
